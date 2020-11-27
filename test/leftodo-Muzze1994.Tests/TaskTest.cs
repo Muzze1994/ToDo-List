@@ -24,32 +24,42 @@ namespace leftodo_Muzze1994.Tests
         [Fact]
         public void TestMarkAsCompleted()
         {
-            //arrange
+            // arrange
             var tasks = new ListOfTasks();
             tasks.AddTask("Titel", "Descr");
-            //act
+            tasks.AddTask("Titel2", "Descr2");
+            // act
             tasks.CompleteTask(1);
 
-            //assert
-            //Assert.True();
+            // assert
+            Assert.True(tasks.GetIsCompleteBoolFromTask(1));
         }
 
         [Fact]
-        public void TestArchiveCompletedTasks()
+        public void TestMarkAsArchived()
         {
-            //arrange
-            List<Task> tasks = new List<Task>();
-            var listTask = new ListOfTasks();
-            var task = new Task() { Description = "Hej", isComplete = false, Id = 1 };
-            tasks.Add(task);
+            // arrange
+            var tasks = new ListOfTasks();
+            tasks.AddTask("Titel", "Descr");
 
-            //act
-            listTask.CompleteTask(1);
-            listTask.ArchiveTask();
+            // act
+            tasks.CompleteTask(1);
+            tasks.ArchiveTask();
 
-            //assert
-            //Assert.True(task.isArchived);
+            // assert
+            Assert.True(tasks.GetIsArchivedBoolFromTask());
+        }
+        [Fact]
+        public void TestAddDeadlineTask()
+        {
+            // arrange
+            var tasks = new ListOfTasks();
 
+            // act  
+            tasks.AddDeadlineTask("Title", "Descr", 4);
+
+            // assert
+            Assert.Equal(1, tasks.GetNumberOfitemsInTheList());
         }
 
     }
