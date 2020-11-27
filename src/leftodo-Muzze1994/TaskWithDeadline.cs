@@ -15,7 +15,7 @@ namespace leftodo_Muzze1994
             }
             else if (!isArchived)
             {
-                Console.WriteLine(String.Format("{0,-5} {1,-15} {2,-10} {3,-10} {4,-1}", Id, Title, Description, "days to finish: ", daysLeft));
+                Console.WriteLine(String.Format("{0,-5} {1,-15} {2,-20} {3,0} {4,0}", Id, Title, Description, daysLeft, "days left"));
             }
 
         }
