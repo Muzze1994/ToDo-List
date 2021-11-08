@@ -1,3 +1,5 @@
+För att starta projektet navigera ner i src\lefttodo-Muzze1994 sedan kör dotnet run i terminalen/konsollen.
+
 Kort beskrivning av kodens funktioner och struktur:
 
 Mitt projekt innehåller en klass för varje uppgift som ska skapas samt en klass med meny och en listoftasks som innehåller metoder för att visa och lägga till uppgifter. Uppgift med en deadline ärver från klassen med den vanliga uppgiften och det var även tanken till uppgiften med en checklista för att inte skriva onödig kod. Alla uppgifter man skapar hamnar i samma lista med tasks.
